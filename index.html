@@ -4,676 +4,1211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <!-- tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Adocasts</title>
+    <!-- style.css -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="bg-slate-100">
+<body class="overflow-x-hidden">
 
     <!-- navbar area -->
-    <nav class="navbar container mx-auto px-3 lg:px-5 py-5">
-        <div class="flex items-center justify-between gap-5">
-            <div class="">
-                <img src="./img//logo-black.svg" alt="logo" class="w-36">
-            </div>
-            <div>
-                <nav>
-                    <ul class="lg:flex space-x-3 hidden">
-                        <li><a href="/series" class="text-xl font-semibold cursor-pointer">Series</a></li>
-                        <li><a href="/topics" class="text-xl font-semibold cursor-pointer">Topics</a></li>
-                        <li><a href="/lessons" class="text-xl font-semibold cursor-pointer">Lessons</a></li>
-                        <li><a href="/blog" class="text-xl font-semibold cursor-pointer">Blog</a></li>
-                        <li><a href="/discuss" class="text-xl font-semibold cursor-pointer">Discuss</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="flex items-center gap-3">
-                <div
-                    class="bg-slate-200 p-2 text-black rounded-lg hover:bg-gray-300 hover:cursor-pointer transition duration-500 ease-in-out">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="relative z-[101]">
+        <header class="bg-slate-100 relative z-50 mx-auto py-1.5">
+            <nav class="mx-auto flex items-center justify-between page">
+                <div class="">
+                    <img src="./img//logo-black.svg" alt="logo" class="w-auto h-6 md:h-7">
                 </div>
-                <div
-                    class="bg-slate-200 p-2 text-blck rounded-lg hover:bg-gray-300 hover:cursor-pointer transition duration-500 ease-in-out">
-                    <i class="fa-solid fa-sun"></i>
+                <div class="flex lg:flex-1 justify-center order-1 lg:order-2 mr-3 lg:mr-0">
+                    <div class="hidden lg:flex lg:gap-x-4 xl:gap-x-6 ">
+                        <a href="/series" class="header-link">Series</a>
+                        <a href="/topics" class="header-link">Topics</a>
+                        <a href="/lessons" class="header-link">Lessons</a>
+                        <a href="/blog" class="header-link">Blog</a>
+                        <a href="/discuss" class="header-link">Discuss</a>
+                    </div>
                 </div>
-                <div class="hidden lg:flex gap-3">
-                    <button
-                        class="bg-gray-200 text-black px-4 py-2 rounded-lg hover:bg-gray-300 hover:cursor-pointer transition duration-500 ease-in-out">SignIn</button>
-                    <button class="bg-black text-white px-4 py-2 rounded-lg">Sign Up</button>
+                <div class="flex items-center justify-end gap-2 order-3">
+                    <div>
+                        <a href="/search"
+                            class="duration-300 p-1.5 text-sm inline-flex items-center justify-center font-medium tracking-wide text-slate-800 transition-colors rounded-md border-2 border-slate-200 hover:border-slate-300 bg-slate-200 hover:bg-slate-300 hover:text-slate-900 focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 focus:shadow-outline focus:outline-none">
+                            <span class="flex items-center gap-1.5 undefined">
+                                <i class="fa-solid fa-magnifying-glass w-3 h-3 md:w-4 md:h-4 m-0.5"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/theme"
+                            class="duration-300 p-1.5 text-sm inline-flex items-center justify-center font-medium tracking-wide text-slate-800 transition-colors rounded-md border-2 border-slate-200 hover:border-slate-300 bg-slate-200 hover:bg-slate-300 hover:text-slate-900 focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 focus:shadow-outline focus:outline-none">
+                            <span class="flex items-center gap-1.5 undefined">
+                                <i class="fa-solid fa-sun w-3 h-3 md:w-4 md:h-4 m-0.5"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <a href="/signin" up-target="[up-main]" up-layer="new" up-follow="" x-data="" type="button"
+                        class="duration-300 px-3 py-1.5 text-sm inline-flex items-center justify-center font-medium tracking-wide text-slate-800 transition-colors rounded-md border-2 border-slate-200 hover:border-slate-300 bg-slate-200 hover:bg-slate-300 hover:text-slate-900 focus:ring-2 focus:ring-offset-2 focus:ring-slate-200 focus:shadow-outline focus:outline-none md:inline-block">
+                        <span class="flex items-center gap-1.5 undefined">
+                            Sign In
+                        </span>
+                    </a>
+                    <a href="/signup" up-target="[up-main]" up-layer="new" up-follow="" x-data="" type="button"
+                        class="duration-300 px-3 py-1.5 text-sm inline-flex items-center justify-center font-medium tracking-wide text-slate-50 transition-colors rounded-md border-2 border-slate-950 hover:border-slate-700 bg-slate-950 hover:bg-slate-700 focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 focus:shadow-outline focus:outline-none shadow-none hover:shadow-glow md:inline-block">
+                        <span class="flex items-center gap-1.5 undefined">
+                            Sign up
+                        </span>
+                    </a>
                 </div>
-            </div>
-        </div>
-    </nav>
+            </nav>
+        </header>
+    </div>
 
     <!-- header area -->
 
-    <header class="min-h-screen bg-[#231D4C] relative overflow-hidden">
-        <div class="container mx-auto px-3 lg:px-5 py-5">
-            <div class="py-20 capitalize text-7xl text-white font-bold">
-                <p>Launch Your</p> <span class="text-[#6564ED]">AdonisJS</span> Skills <p>to the Stars</p>
-            </div>
+    <div class="relative z-[101]">
+        <section
+            class="relative bg-brand-base-950 md:bg-gradient-to-b from-[#050820] via-brand-base-950 to-brand-base-950 pt-24 pb-44 md:pb-72 lg:pb-96 xl:pt-24">
+            <div class="relative overflow-hidden mb-24 mx-auto">
+                <div class="page relative z-20">
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-heading font-black uppercase text-slate-base-100 flex flex-col">
+                        <span>Launch Your</span>
+                        <span>
+                            <span
+                                class="inline-block bg-gradient-to-br from-brand-base-600 to-brand-base-400 bg-clip-text text-transparent">
+                                AdonisJS
+                            </span> Skills
+                        </span>
+                        <span>to the Stars</span>
+                    </h1>
 
-            <div class="gap-5">
-                <button class="bg-white px-12 py-2 rounded-md text-black">Sign up for free</button>
-                <button
-                    class="bg-transparent border border-white px-12 py-2 rounded-md text-white hover:cursor-pointer hover:bg-white hover:text-black transition duration-500 ease-out items-center font-semibold">New
-                    to AdonisJS? start here <i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="inline-grid grid-cols-1 md:grid-cols-2 gap-3 mt-8 xl:scale-105 origin-left">
+
+                        <a href="/signup" up-layer="new" up-follow="" x-data="" type="button"
+                            class="duration-300 px-3 py-1.5 text-sm inline-flex items-center justify-center font-medium tracking-wide transition-colors border-2 border-slate-base-100 hover:border-slate-base-50 bg-slate-base-100 hover:bg-slate-base-50 rounded-md text-slate-base-900 hover:text-slate-base-700 active:bg-slate-base-50 focus:bg-slate-base-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-base-200/60 focus:shadow-outline shadow-none hover:shadow-glow">
+                            <span class="flex items-center gap-1.5 undefined">
+                                Sign up for free
+                            </span>
+                        </a>
+                        <a href="/series/lets-learn-adonisjs-6" up-follow="" x-data="" type="button"
+                            class="duration-300 px-3 py-1.5 text-sm inline-flex items-center justify-center font-medium tracking-wide transition-colors bg-slate-base-50/0 border-2 rounded-md text-slate-base-50 hover:text-slate-base-900 border-slate-base-50 hover:bg-slate-base-50">
+                            <span class="flex items-center gap-1.5 undefined">
+                                New to AdonisJS? Start here <svg width="1em" height="1em" viewBox="0 0 256 256">
+                                    <path fill="currentColor"
+                                        d="m224.49 136.49l-72 72a12 12 0 0 1-17-17L187 140H40a12 12 0 0 1 0-24h147l-51.49-51.52a12 12 0 0 1 17-17l72 72a12 12 0 0 1-.02 17.01">
+                                    </path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </header>
+        </section>
+
+    </div>
 
     <!-- series area -->
 
-    <main class="container mx-auto px-3 lg:px-5 py-10">
-        <h1 class="text-black text-4xl font-bold">Series.</h1>
+    <main class="container mx-auto px-3 lg:px-5 py-5">
+        <h2 class="text-2xl md:text-3xl xl:text-4xl font-heading font-black tracking-tight mb-1.5">Series.</h2>
         <div class="lg:flex items-center justify-between">
-            <h3 class="text-[#4F46E5] text-xl font-semibold">Step-By-Step Learning</h3>
-            <h3 class="text-[#020617] text-xl font-semibold items-center">Browse All Series <i
-                    class="fa-solid fa-arrow-right"></i></h3>
+            <h5 class="font-bold text-brand-600 uppercase relative z-10 mb-1.5 md:mb-3">Step-By-Step Learning</h5>
+            <a href="/series" up-follow=""
+                class="flex items-center gap-1.5 font-bold link current text-slate-600 hover:text-slate-950">
+                Browse All Series <i class="fa-solid fa-arrow-right w-[1em] h-[1em]"></i>
+            </a>
         </div>
 
-        <div class="md:flex items-stretch justify-between gap-3 py-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-6 xl:gap-8">
             <div
-                class="bg-[#E7EAEE] flex gap-3 p-5 rounded-md lg:basis-2/3 hover:cursor-pointer hover:border hover:border-[#E2E8F0]">
-                <div class="lg:basis-1/2">
-                    <h1 class="text-[#1E293B] text-2xl font-bold">Adding an API to an AdonisJS Web App</h1>
-                    <div class="flex items-center gap-10 my-3 text-[#475569]">
-                        <h3><i class="fa-solid fa-graduation-cap"></i> 37 Lessons</h3>
-                        <h3><i class="fa-solid fa-clock"></i> 4h 37m</h3>
-                    </div>
-                    <p class="text-[#475569] text-xl">In this series, we'll ad a API, using Opaque Access Tokens for
-                        authentication, to a preexisting web application. We well implement dual-guard authentication,
-                        add a token management panel, and authentication our API directly with an organization model!
-                    </p>
-                </div>
-                <div class="lg:basis-1/2 py-2 hidden lg:block">
-                    <h4 class="text-[#465468] uppercase font-semibold mb-5">latest form this series</h4>
-                    <div class="flex items-center gap-5 text-[#475569]">
-                        <h4>Lesson 6.1</h4>
-                        <span>.</span>
-                        <h4>Aug 07</h4>
-                    </div>
-                    <h4 class="uppercase font-bold mb-5 text-[#0F172A]">Advanced String filtering</h4>
-                    <div class="flex items-center gap-5">
-                        <h4>Lesson 6.0</h4>
-                        <span>.</span>
-                        <h4>Aug 05</h4>
-                    </div>
-                    <h4 class="uppercase font-bold mb-5 text-[#0F172A]">Basic course search & filter</h4>
-                    <div class="flex items-center gap-5">
-                        <h4>Lesson 5.9</h4>
-                        <span>.</span>
-                        <h4>Jul 31</h4>
-                    </div>
-                    <h4 class="uppercase font-bold mb-5 text-[#0F172A]">Getting a Module's Lessons</h4>
-                </div>
-            </div>
-            <div
-                class="bg-[#E7EAEE] lg:basis-1/3 p-5 my-5 lg:my-0 rounded-md lg:min-h-[300px] hover:cursor-pointer hover:border hover:border-[#E2E8F0]">
-                <h4 class="text-[#1E293B] text-2xl font-bold mb-3">AdonisJS Quick tip</h4>
-                <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> 23 Lessons</h3>
-                    <h3><i class="fa-solid fa-clock"></i> 2h 43m</h3>
-                </div>
-                <p class="text-[#475569]">Quick tips, lessons, and screencasts covering specific topics on AdonisJS.</p>
-            </div>
-        </div>
+                class="group relative flex items-start overflow-hidden rounded-lg duration-300 border-2 border-transparent hover:border-slate-200 bg-slate-100 md:col-span-2">
+                <div class="flex flex-col lg:grid lg:grid-cols-2">
+                    <a href="/series/adding-an-api-to-an-adonisjs-web-app"
+                        class="relative mx-2 inline-flex flex-col rounded-lg p-2 md:p-4 lg:p-6">
+                        <h3 class="text-lg font-black text-slate-800 lg:text-xl">Adding an API to an AdonisJS Web App
+                        </h3>
+                        <div class="flex gap-x-3 text-slate-600 text-sm mt-1">
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i>
+                                <span>38 Lessons</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-clock w-[1em] h-[1em]"></i>
+                                4h 46m
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm lg:text-base mt-3">In this series, we'll add a API, using
+                            Opaque Access Tokens for authentication, to a preexisting web application. We'll implement
+                            dual-guard authentication, add a token management panel, and authenticate our API directly
+                            with an organization model!</p>
+                    </a>
+                    <div class="hidden md:block max-w-md p-4 lg:p-6 rounded-lg mt-4 lg:mt-0">
+                        <h5 class="uppercase font-semibold tracking-tight text-xs text-slate-600 mb-1.5">
+                            Latest from this series
+                        </h5>
+                        <div class="flex flex-col md:flex-row relative z-10 gap-4 lg:gap-8 -mx-2">
+                            <div class="w-full flex flex-col">
+                                <a href="/series/adding-an-api-to-an-adonisjs-web-app/lessons/filtering-by-a-number-or-array-of-numbers"
+                                    class="-mx-2 flex flex-col sm:flex-row md:items-center group duration-300 group bg-transparent hover:bg-slate-100 rounded-lg py-1.5">
+                                    <div class="w-full mx-4">
+                                        <div class="flex items-center gap-1">
+                                            <span
+                                                class="text-xs tracking-wide text-slate-600 whitespace-nowrap duration-150">
+                                                Lesson 6.2
+                                            </span>
+                                            <div class="md:hidden lg:block relative text-slate-500">
+                                                ・
+                                            </div>
+                                            <div class="md:hidden lg:block text-slate-500 whitespace-nowrap text-xs">
+                                                Aug 11
+                                            </div>
+                                        </div>
+                                        <h3 class="font-bold text-sm line-clamp-3 leading-5">
+                                            <span class="anchor-target current-color hover:current-color">
+                                                Filtering by a Number or Array of Numbers
+                                            </span>
+                                        </h3>
+                                        <p class="mb-2 mt-2 text-xs line-clamp-2 md:hidden text-slate-600">
+                                            In this lesson, we'll implement our number filtering system in which we'll
+                                            allow our search APIs to accept a single number or an array of numbers to
+                                            filter the data by. To validate this, we'll use the union rule from VineJS.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="/series/adding-an-api-to-an-adonisjs-web-app/lessons/advanced-string-filtering"
+                                    class="-mx-2 flex flex-col sm:flex-row md:items-center group duration-300 group bg-transparent hover:bg-slate-100 rounded-lg py-1.5">
 
-        <div class="md:flex items-stretch justify-between gap-3 lg:py-5">
-            <div
-                class="bg-[#E7EAEE] lg:basis-1/3 p-5 rounded-md lg:min-h-[300px] hover:cursor-pointer hover:border hover:border-[#E2E8F0]">
-                <h4 class="text-[#1E293B] text-2xl font-bold mb-3">Building with AdonisJS & Inertia</h4>
-                <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> 91 Lessons</h3>
-                    <h3><i class="fa-solid fa-clock"></i> 14h 5m</h3>
-                </div>
-                <p class="text-[#475569]">We well how to use InertiaJs with AdonisJS 6 to build a feature-complete
-                    application, called plotMyCourse. Our application will use server-side rendering (SSR), Vue 3,
-                    Shan-cn-Vue. It will feature organizations, drag-and-drop and lots of forms</p>
-            </div>
-            <div
-                class="bg-[#E7EAEE] flex gap-3 p-5 my-5 lg:my-0 rounded-md lg:basis-2/3 hover:cursor-pointer hover:border hover:border-[#E2E8F0]">
-                <div class="lg:basis-1/2">
-                    <h1 class="text-[#1E293B] text-2xl font-bold">AdonisJS in 30</h1>
-                    <div class="flex items-center gap-10 my-3 text-[#475569]">
-                        <h3><i class="fa-solid fa-graduation-cap"></i> 9 Lessons</h3>
-                        <h3><i class="fa-solid fa-clock"></i> 2h 59m</h3>
-                    </div>
-                    <p class="text-[#475569] text-xl">In this series, we'll highlight various features and
-                        functionalities in AdonisJS you can complete in about 30 minutes or less.</p>
-                </div>
-                <div class="lg:basis-1/2 py-2 hidden lg:block">
-                    <h4 class="text-[#465468] uppercase font-semibold mb-5">latest form this series</h4>
-                    <div class="flex items-center gap-5 text-[#475569]">
-                        <h4>Lesson 9.0</h4>
-                        <span>.</span>
-                        <h4>Nov 6, 24</h4>
-                    </div>
-                    <h4 class="uppercase font-bold mb-5 text-[#0F172A] text-xs">How To Add Social Authentication with
-                        AdonisJS Ally and Google</h4>
-                    <div class="flex items-center gap-5">
-                        <h4>Lesson 8.0</h4>
-                        <span>.</span>
-                        <h4>Aug 02, 24</h4>
-                    </div>
-                    <h4 class="uppercase font-bold mb-5 text-[#0F172A] text-xs">How to make a simple AdonisJS 6 Package
-                    </h4>
-                    <div class="flex items-center gap-5">
-                        <h4>Lesson 7.0</h4>
-                        <span>.</span>
-                        <h4>Jul 22, 24</h4>
-                    </div>
-                    <h4 class="uppercase font-bold mb-5 text-[#0F172A] text-xs">Three Approaches for organizing your
-                        AdonisJS Business Logic Operations.</h4>
-                </div>
-            </div>
-        </div>
+                                    <div class="w-full mx-4">
+                                        <div class="flex items-center gap-1">
 
-        <div class="md:flex items-stretch justify-between gap-3 py-5">
-            <div
-                class="bg-[#E7EAEE] flex gap-3 p-5 rounded-md lg:basis-2/3 hover:cursor-pointer hover:border hover:border-[#E2E8F0]">
-                <div class="lg:basis-1/2">
-                    <h1 class="text-[#1E293B] text-2xl font-bold">Let's Learn AdonisJS 6</h1>
-                    <div class="flex items-center gap-10 my-3 text-[#475569]">
-                        <h3><i class="fa-solid fa-graduation-cap"></i> 113 Lessons</h3>
-                        <h3><i class="fa-solid fa-clock"></i> 14h 11m</h3>
+                                            <span
+                                                class="text-xs tracking-wide text-slate-600 whitespace-nowrap duration-150">
+                                                Lesson 6.1
+                                            </span>
+
+                                            <div class="md:hidden lg:block relative text-slate-500">
+                                                ・
+                                            </div>
+
+                                            <div class="md:hidden lg:block text-slate-500 whitespace-nowrap text-xs">
+                                                Aug 07
+                                            </div>
+                                        </div>
+
+
+                                        <h3 class="font-bold text-sm line-clamp-3 leading-5">
+                                            <span class="anchor-target current-color hover:current-color">
+                                                Advanced String Filtering
+                                            </span>
+                                        </h3>
+
+                                        <p class="mb-2 mt-2 text-xs line-clamp-2 md:hidden text-slate-600">
+                                            In this lesson, we upgrade our course name filter to support both simple
+                                            strings and advanced object-based queries using VineJS’ union rule. This
+                                            allows users to specify not just what to search for, but how to search for
+                                            it.
+                                        </p>
+                                    </div>
+                                </a>
+
+
+                                <a href="/series/adding-an-api-to-an-adonisjs-web-app/lessons/basic-course-search-and-filter"
+                                    class="-mx-2 flex flex-col sm:flex-row md:items-center group duration-300 group bg-transparent hover:bg-slate-100 rounded-lg py-1.5">
+
+                                    <div class="w-full mx-4">
+                                        <div class="flex items-center gap-1">
+
+                                            <span
+                                                class="text-xs tracking-wide text-slate-600 whitespace-nowrap duration-150">
+                                                Lesson 6.0
+                                            </span>
+
+                                            <div class="md:hidden lg:block relative text-slate-500">
+                                                ・
+                                            </div>
+
+                                            <div class="md:hidden lg:block text-slate-500 whitespace-nowrap text-xs">
+                                                Aug 05
+                                            </div>
+                                        </div>
+
+
+                                        <h3 class="font-bold text-sm line-clamp-3 leading-5">
+                                            <span class="anchor-target current-color hover:current-color">
+                                                Basic Course Search &amp; Filter
+                                            </span>
+                                        </h3>
+
+                                        <p class="mb-2 mt-2 text-xs line-clamp-2 md:hidden text-slate-600">
+                                            In this lesson, we'll add a new search endpoint for our courses and enable
+                                            some basic filter functionality along with it. We'll be able to search by
+                                            course name likeness, status, difficulty, and/or access level.
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-[#475569] text-xl">In this series, we'll learn AdonisJS 6 Step-By-Step in a
-                        beginner-friendly way. Covering topics like routing, controllers, services, EdgeJS, Lucid ORM,
-                        forms, filtering, authentication etc.</p>
-                </div>
-                <div class="lg:basis-1/2 py-2 hidden lg:block">
-                    <h4 class="text-[#465468] uppercase font-semibold mb-5">latest form this series</h4>
-                    <div class="flex items-center gap-5 text-[#475569]">
-                        <h4>Lesson 11.11</h4>
-                        <span>.</span>
-                        <h4>Jun 29, 24</h4>
-                    </div>
-                    <h4 class="uppercase font-bold mb-5 text-[#0F172A] text-xs">Thank you for watching!</h4>
-                    <div class="flex items-center gap-5">
-                        <h4>Lesson 11.10</h4>
-                        <span>.</span>
-                        <h4>Jun 29, 24</h4>
-                    </div>
-                    <h4 class="uppercase font-bold mb-5 text-[#0F172A] text-xs">Allowing Admins to delete Movies and
-                        their Relationships.</h4>
-                    <div class="flex items-center gap-5">
-                        <h4>Lesson 11.09</h4>
-                        <span>.</span>
-                        <h4>Jun 26, 24</h4>
-                    </div>
-                    <h4 class="uppercase font-bold mb-5 text-[#0F172A] text-xs">Managed Transactions and Syncing Movie
-                        cast Members.</h4>
                 </div>
             </div>
+
+
             <div
-                class="bg-[#E7EAEE] lg:basis-1/3 p-5 my-5 lg:my-0 rounded-md lg:min-h-[300px] hover:cursor-pointer hover:border hover:border-[#E2E8F0]">
-                <h4 class="text-[#1E293B] text-2xl font-bold mb-3">EdgeJS components</h4>
-                <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> 25 Lessons</h3>
-                    <h3><i class="fa-solid fa-clock"></i> 1h 42m</h3>
+                class="group relative flex items-start overflow-hidden rounded-lg duration-300 border-2 border-transparent hover:border-slate-200 bg-slate-100 ">
+                <div class="flex flex-col ">
+                    <a href="/series/adonisjs-quick-tip"
+                        class="relative mx-2 inline-flex flex-col rounded-lg p-2 md:p-4 lg:p-6">
+                        <h3 class="text-lg font-black text-slate-800 lg:text-xl">AdonisJS Quick Tip</h3>
+                        <div class="flex gap-x-3 text-slate-600 text-sm mt-1">
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i>
+                                <span>23 Lessons</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-clock w-[1em] h-[1em]"></i>
+                                2h 43m
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm lg:text-base mt-3">Quick tips, lessons, and screencasts
+                            covering specific topics on AdonisJS.</p>
+                    </a>
                 </div>
-                <p class="text-[#475569]">In this series, we'll take a deep dive into EdgeJS Components by creating our
-                    own reusable components from the PinesUI component library, built with tailwindcss and ApineJS.</p>
+            </div>
+
+
+            <div
+                class="group relative flex items-start overflow-hidden rounded-lg duration-300 border-2 border-transparent hover:border-slate-200 bg-slate-100 ">
+                <div class="flex flex-col ">
+                    <a href="/series/building-with-inertiajs" up-follow=""
+                        class="relative mx-2 inline-flex flex-col rounded-lg p-2 md:p-4 lg:p-6">
+
+                        <h3 class="text-lg font-black text-slate-800 lg:text-xl">Building with AdonisJS &amp; Inertia
+                        </h3>
+                        <div class="flex gap-x-3 text-slate-600 text-sm mt-1">
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i>
+                                <span>91 Lessons</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-clock w-[1em] h-[1em]"></i>
+                                14h 5m
+                            </div>
+                        </div>
+
+                        <p class="text-slate-600 text-sm lg:text-base mt-3">We'll learn how to use InertiaJS with
+                            AdonisJS 6 to build a feature-complete application, called PlotMyCourse. Our application
+                            will use server-side rendering (SSR), Vue 3, and Shadcn-Vue. It'll feature organizations,
+                            drag-and-drop, and lots of forms.</p>
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="group relative flex items-start overflow-hidden rounded-lg duration-300 border-2 border-transparent hover:border-slate-200 bg-slate-100 md:col-span-2">
+                <div class="flex flex-col lg:grid lg:grid-cols-2">
+                    <a href="/series/adonisjs-in-15"
+                        class="relative mx-2 inline-flex flex-col rounded-lg p-2 md:p-4 lg:p-6">
+                        <h3 class="text-lg font-black text-slate-800 lg:text-xl">AdonisJS In 30</h3>
+                        <div class="flex gap-x-3 text-slate-600 text-sm mt-1">
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i>
+                                <span>9 Lessons</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-clock w-[1em] h-[1em]"></i>
+                                2h 59m
+                            </div>
+                        </div>
+
+                        <p class="text-slate-600 text-sm lg:text-base mt-3">In this series, we'll highlight various
+                            features and functionalities in AdonisJS you can complete in about 30 minutes or less.</p>
+                    </a>
+
+                    <div class="hidden md:block max-w-md p-4 lg:p-6 rounded-lg mt-4 lg:mt-0">
+                        <h5 class="uppercase font-semibold tracking-tight text-xs text-slate-600 mb-1.5">
+                            Latest from this series
+                        </h5>
+                        <div class="flex flex-col md:flex-row relative z-10 gap-4 lg:gap-8 -mx-2">
+                            <div class="w-full flex flex-col">
+
+                                <a href="/series/adonisjs-in-15/lessons/add-social-authentication-with-adonisjs-ally-and-google"
+                                    class="-mx-2 flex flex-col sm:flex-row md:items-center group duration-300 group bg-transparent hover:bg-slate-100 rounded-lg py-1.5">
+
+                                    <div class="w-full mx-4">
+                                        <div class="flex items-center gap-1">
+                                            <span
+                                                class="text-xs tracking-wide text-slate-600 whitespace-nowrap duration-150">
+                                                Lesson 9.0
+                                            </span>
+                                            <div class="md:hidden lg:block relative text-slate-500">
+                                                ・
+                                            </div>
+                                            <div class="md:hidden lg:block text-slate-500 whitespace-nowrap text-xs">
+                                                Nov 06, 24
+                                            </div>
+                                        </div>
+                                        <h3 class="font-bold text-sm line-clamp-3 leading-5">
+                                            <span class="anchor-target current-color hover:current-color">
+                                                How To Add Social Authentication with AdonisJS Ally &amp; Google
+                                            </span>
+                                        </h3>
+                                        <p class="mb-2 mt-2 text-xs line-clamp-2 md:hidden text-slate-600">
+                                            In this lesson, we'll learn how we can use AdonisJS Ally to add social
+                                            authentication to our applications. We'll use Google for our demonstration,
+                                            but this same process also applies to GitHub, Facebook, Discord, LinkedIn,
+                                            Twitter, &amp; more
+                                        </p>
+                                    </div>
+                                </a>
+
+
+                                <a href="/series/adonisjs-in-15/lessons/how-to-make-a-simple-adonisjs-6-package"
+                                    class="-mx-2 flex flex-col sm:flex-row md:items-center group duration-300 group bg-transparent hover:bg-slate-100 rounded-lg py-1.5">
+                                    <div class="w-full mx-4">
+                                        <div class="flex items-center gap-1">
+                                            <span
+                                                class="text-xs tracking-wide text-slate-600 whitespace-nowrap duration-150">
+                                                Lesson 8.0
+                                            </span>
+                                            <div class="md:hidden lg:block relative text-slate-500">
+                                                ・
+                                            </div>
+                                            <div class="md:hidden lg:block text-slate-500 whitespace-nowrap text-xs">
+                                                Aug 02, 24
+                                            </div>
+                                        </div>
+                                        <h3 class="font-bold text-sm line-clamp-3 leading-5">
+                                            <span class="anchor-target current-color hover:current-color">
+                                                How To Make A Simple AdonisJS 6 Package
+                                            </span>
+                                        </h3>
+                                        <p class="mb-2 mt-2 text-xs line-clamp-2 md:hidden text-slate-600">
+                                            In this lesson, we'll learn how to use AdonisJS' Package Starter Kit to
+                                            create a simple package where we can configure and add a make:action Ace CLI
+                                            command to generate action class files, similar to the make:service command.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="/series/adonisjs-in-15/lessons/three-approaches-for-organizing-your-adonisjs-business-logic-operations"
+                                    class="-mx-2 flex flex-col sm:flex-row md:items-center group group bg-transparent hover:bg-slate-100 duration-300 rounded-lg py-1.5">
+                                    <div class="w-full mx-4">
+                                        <div class="flex items-center gap-1">
+                                            <span
+                                                class="text-xs tracking-wide text-slate-600 whitespace-nowrap duration-150">
+                                                Lesson 7.0
+                                            </span>
+                                            <div class="md:hidden lg:block relative text-slate-500">
+                                                ・
+                                            </div>
+                                            <div class="md:hidden lg:block text-slate-500 whitespace-nowrap text-xs">
+                                                Jul 22, 24
+                                            </div>
+                                        </div>
+                                        <h3 class="font-bold text-sm line-clamp-3 leading-5">
+                                            <span class="anchor-target current-color hover:current-color">
+                                                Three Approaches for Organizing your AdonisJS Business Logic Operations
+                                            </span>
+                                        </h3>
+                                        <p class="mb-2 mt-2 text-xs line-clamp-2 md:hidden text-slate-600">
+                                            In this lesson, we'll dive deep into three different ways we can organize
+                                            our code; fat controllers, services, and actions. We'll also discuss
+                                            circular dependencies, static and non-static service methods, and dependency
+                                            injection.
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div
+                class="group relative flex items-start overflow-hidden rounded-lg duration-300 border-2 border-transparent hover:border-slate-200 bg-slate-100 lg:col-span-2">
+                <div class="flex flex-col lg:grid lg:grid-cols-2">
+                    <a href="/series/lets-learn-adonisjs-6" up-follow=""
+                        class="relative mx-2 inline-flex flex-col rounded-lg p-2 md:p-4 lg:p-6">
+
+                        <h3 class="text-lg font-black text-slate-800 lg:text-xl">Let's Learn AdonisJS 6</h3>
+
+                        <div class="flex gap-x-3 text-slate-600 text-sm mt-1">
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i>
+                                <span>113 Lessons</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-clock w-[1em] h-[1em]"></i>
+                                14h 11m
+                            </div>
+                        </div>
+
+                        <p class="text-slate-600 text-sm lg:text-base mt-3">In this series, we'll learn AdonisJS 6
+                            step-by-step in a beginner-friendly way. Covering topics like routing, controllers,
+                            services, EdgeJS, Lucid ORM, forms, filtering, authentication, etc.</p>
+                    </a>
+                    <div class="hidden lg:block max-w-md p-4 lg:p-6 rounded-lg mt-4 lg:mt-0">
+                        <h5 class="uppercase font-semibold tracking-tight text-xs text-slate-600 mb-1.5">
+                            Latest from this series
+                        </h5>
+                        <div class="flex flex-col md:flex-row relative z-10 gap-4 lg:gap-8 -mx-2">
+                            <div class="w-full flex flex-col">
+                                <a up-follow="" href="/series/lets-learn-adonisjs-6/lessons/thank-you-for-watching"
+                                    class="-mx-2 flex flex-col sm:flex-row md:items-center group duration-300 group bg-transparent hover:bg-slate-100 rounded-lg py-1.5">
+                                    <div class="w-full mx-4">
+                                        <div class="flex items-center gap-1">
+                                            <span
+                                                class="text-xs tracking-wide text-slate-600 whitespace-nowrap duration-150">
+                                                Lesson 11.11
+                                            </span>
+                                            <div class="md:hidden lg:block relative text-slate-500">
+                                                ・
+                                            </div>
+                                            <div class="md:hidden lg:block text-slate-500 whitespace-nowrap text-xs">
+                                                Jun 29, 24
+                                            </div>
+                                        </div>
+                                        <h3 class="font-bold text-sm line-clamp-3 leading-5">
+                                            <span class="anchor-target current-color hover:current-color">
+                                                Thank You for Watching!
+                                            </span>
+                                        </h3>
+                                        <p class="mb-2 mt-2 text-xs line-clamp-2 md:hidden text-slate-600">
+                                            A quick thank you to all those who watched! If you have feedback, please let
+                                            us know down in the comments.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="/series/lets-learn-adonisjs-6/lessons/allowing-admins-to-delete-movies-and-their-relationships"
+                                    class="-mx-2 flex flex-col sm:flex-row md:items-center group group bg-transparent hover:bg-slate-100 duration-300 rounded-lg py-1.5">
+                                    <div class="w-full mx-4">
+                                        <div class="flex items-center gap-1">
+                                            <span
+                                                class="text-xs tracking-wide text-slate-600 whitespace-nowrap duration-150">
+                                                Lesson 11.10
+                                            </span>
+                                            <div class="md:hidden lg:block relative text-slate-500">
+                                                ・
+                                            </div>
+                                            <div class="md:hidden lg:block text-slate-500 whitespace-nowrap text-xs">
+                                                Jun 29, 24
+                                            </div>
+                                        </div>
+                                        <h3 class="font-bold text-sm line-clamp-3 leading-5">
+                                            <span class="anchor-target current-color hover:current-color">
+                                                Allowing Admins to Delete Movies and their Relationships
+                                            </span>
+                                        </h3>
+                                        <p class="mb-2 mt-2 text-xs line-clamp-2 md:hidden text-slate-600">
+                                            In this lesson, we'll learn how we can safely delete movies and their
+                                            relationships. We'll discuss how we need to consider foreign key
+                                            constraints, and what to do when our deletes aren't set to cascade.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a up-follow=""
+                                    href="/series/lets-learn-adonisjs-6/lessons/managed-transactions-and-syncing-movie-cast-members"
+                                    class="-mx-2 flex flex-col sm:flex-row md:items-center group group bg-transparent hover:bg-slate-100 duration-300 rounded-lg py-1.5">
+                                    <div class="w-full mx-4">
+                                        <div class="flex items-center gap-1">
+                                            <span
+                                                class="text-xs tracking-wide text-slate-600 whitespace-nowrap duration-150">
+                                                Lesson 11.9
+                                            </span>
+                                            <div class="md:hidden lg:block relative text-slate-500">
+                                                ・
+                                            </div>
+                                            <div class="md:hidden lg:block text-slate-500 whitespace-nowrap text-xs">
+                                                Jun 26, 24
+                                            </div>
+                                        </div>
+                                        <h3 class="font-bold text-sm line-clamp-3 leading-5">
+                                            <span class="anchor-target current-color hover:current-color">
+                                                Managed Transactions and Syncing Movie Cast Members
+                                            </span>
+                                        </h3>
+                                        <p class="mb-2 mt-2 text-xs line-clamp-2 md:hidden text-slate-600">
+                                            In this lesson, we'll learn how we can use what we learned in the last
+                                            lesson to also sync our cast members. We'll then extract this functionality
+                                            into a service and wrap it within a managed database transactions.
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div
+                class="group relative flex items-start overflow-hidden rounded-lg duration-300 border-2 border-transparent hover:border-slate-200 bg-[#F1F5F9]">
+                <div class="flex flex-col ">
+                    <a href="/series/edgejs-components" up-follow=""
+                        class="relative mx-2 inline-flex flex-col rounded-lg p-2 md:p-4 lg:p-6">
+
+                        <h3 class="text-lg font-black text-slate-800 lg:text-xl">EdgeJS Components</h3>
+
+                        <div class="flex gap-x-3 text-slate-600 text-sm mt-1">
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i>
+                                <span>25 Lessons</span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-clock w-[1em] h-[1em]"></i>
+                                1h 42m
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm lg:text-base mt-3">In this series, we'll take a deep dive into
+                            EdgeJS Components by creating our own reusable components from the PinesUI component
+                            library, built with TailwindCSS and ApineJS.</p>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
 
     <!-- topics area -->
 
-    <main class="bg-[#FBFDFF]">
-        <div class="container mx-auto px-3 lg:px-5 py-10">
-            <h1 class="text-black text-4xl font-bold">Topics.</h1>
-            <div class="lg:flex items-center justify-between">
-                <h3 class="text-[#4F46E5] text-xl font-semibold uppercase">Subject Based Learning</h3>
-                <h3 class="text-[#020617] text-xl font-semibold items-center">Browse All Topics <i
-                        class="fa-solid fa-arrow-right"></i></h3>
+    <main>
+        <div class="container mx-auto px-3 lg:px-5 py-5">
+            <h2 class="text-2xl md:text-3xl xl:text-4xl font-heading font-black tracking-tight mb-1.5">Topics.</h2>
+            <div class="flex justify-between items-center">
+                <div>
+                    <h5 class="font-bold text-brand-600 uppercase relative z-10 mb-1.5 md:mb-0 topics">
+                        Subject-Based Learning
+                    </h5>
+                </div>
+                <div>
+                    <a href="/topics"
+                        class="flex items-center gap-1.5 font-bold link current text-slate-600 hover:text-slate-950">
+                        Browse All Topics <i class="fa-solid fa-arrow-right w-[1em] h-[1em]"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-3">
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-8 pt-4">
+                <a href="/topics/ace-cli" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
                         <div>
-                            <img src="./img/terminal_1697770046459.png" alt="aci" class="w-24">
+                            <img src="./img/terminal_1697770046459.png" alt="aci" class="w-20">
                         </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Ace CLI</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 3 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 15 Lessons</h3>
+                        <div>
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Ace CLI</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>3 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>15 Lessons</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/adonisjs-icon-with-bg_1671308746819.jpeg" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">AdonisJS</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 15 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 394 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/alpinejs_1706922995887.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">AlpineJS</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 2 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 7 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/authentication_1697770401414.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Authentication</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 9 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 43 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/authorization_1697770201941.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Authorization</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 3 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 14 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/aws-amplify-logo-D68DDB5AB1-seeklogo_1671308415523.png" alt="aci"
-                                class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">AWS Amplify</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 1 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 8 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/bouncer_1697770362618.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Bouncer</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 1 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 4 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/abstract_1697804733488.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Ace CLI</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 3 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 35 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/sound-mixer_3591072_1707160896041.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">controllers</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 7 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 34 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/debugging_1706358516416.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Ace CLI</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 0 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 3 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/drive_1697804954408.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Ace CLI</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 1 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 1 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/edgejs_1699649088846.jpeg" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">EdgeJS</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 8 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 90 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/email_1697804518607.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Email</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 2 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 6 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/htmx_1697801632070.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">HTMX</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 1 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 5 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/context_1697770135031.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">HTTPContext</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 6 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 26 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/inertia-icon_1654439516110.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">InertiaJs</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 2 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 102 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/kisspng-javascript-computer-icons-scalable-vector-graphics-list-of-javascript-enhancements-fandom-developers-5d145895da3992_1671308232289.png"
-                                alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Javascript</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 3 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 11 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/lucid_1697770485756.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Lucid</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 10 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 148 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/markdown_1706324528558.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Markdown</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 1 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 3 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/nuxt_1649707654083.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Nuxt</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 1 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 7 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/redis-cube-red_white-rgb_1706358822819.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Redis</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 1 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 2 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/router_1697770100982.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Router</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 6 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 49 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/settings_802226_1706324200876.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Settings</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 5 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 18 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/tailwindcss_1706923172274.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Tailwind</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 4 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 22 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/tips_1697770326569.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Tips</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 3 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 24 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/ts-logo-512_1706359000829.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Typescript</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 1 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 10 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/validator_1697770242096.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Validator</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 5 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 35 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/vite_1706323617873.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">Vite</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 1 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 3 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/vscode_1706359259635.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">VSCode</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 0 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 3 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F1F5F9] rounded-md">
-                    <div class="p-2 flex items-center gap-1">
-                        <div>
-                            <img src="./img/vue_1665253470537.png" alt="aci" class="w-24">
-                        </div>
-                        <div class="">
-                            <h3 class="text-[#0F172A] font-semibold text-xl">VueJS</h3>
-                            <div class="flex items-center gap-5 mb-3 text-[#475569]">
-                                <h3 class="text-xs"><i class="fa-solid fa-server"></i> 3 series</h3>
-                                <h3 class="text-xs"><i class="fa-solid fa-graduation-cap"></i> 90 Lessons</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </a>
 
+                <a href="/topics/adonisjs" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/adonisjs-icon-with-bg_1671308746819.jpeg" alt="aci" class="w-20">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-sm xl:text-base mb-1">AdonisJS</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>15 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>394 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/topics/adonisjs" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/alpinejs_1706922995887.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">AlpineJS</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>2 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>7 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/authentication_1697770401414.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Authentication</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>9 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>43 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/authorization_1697770201941.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Authorization</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>3 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>14 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/aws-amplify-logo-D68DDB5AB1-seeklogo_1671308415523.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">AWS Amplify</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>1 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>8 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/bouncer_1697770362618.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Bouncer</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>1 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>4 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/abstract_1697804733488.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Abstract</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>3 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>35 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/sound-mixer_3591072_1707160896041.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Controllers</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>7 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>34 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/debugging_1706358516416.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Debugging</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>0 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>3 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/drive_1697804954408.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Drive</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>1 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>1 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/edgejs_1699649088846.jpeg" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">EdgeJS</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>8 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>90 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/email_1697804518607.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Email</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>2 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>6 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/htmx_1697801632070.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">HTMX</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>1 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>5 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/context_1697770135031.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">HTTPContext</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>6 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>26 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/inertia-icon_1654439516110.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">InertiaJSh3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>2 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>102 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/kisspng-javascript-computer-icons-scalable-vector-graphics-list-of-javascript-enhancements-fandom-developers-5d145895da3992_1671308232289.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Javascript</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>3 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>11 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/lucid_1697770485756.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Lucid</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>10 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>148 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/markdown_1706324528558.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Markdown</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>1 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>3 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/nuxt_1649707654083.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Nuxt</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>1 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>7 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/redis-cube-red_white-rgb_1706358822819.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Redis</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>1 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>7 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/router_1697770100982.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Router</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>6 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>49 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/settings_802226_1706324200876.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Settings</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>5 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>18 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/tailwindcss_1706923172274.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Tailwind css</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>4 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>22 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/tips_1697770326569.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Tips</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>3 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>24 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/ts-logo-512_1706359000829.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Typescript</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>1 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>10 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/validator_1697770242096.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Validator</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>5 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>35 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/vite_1706323617873.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">Vite</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>1 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>3 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/vscode_1706359259635.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">VSCode</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>0 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>3 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/topics/authentication" class="bg-slate-100 border-2 border-transparent hover:border-slate-200 rounded-lg p-4 flex items-center duration-300 z-10 w-full h-full gap-2 xl:gap-4 group">
+                    <div class="flex justify-center items-center translate-y-0 h-fit mr-1.5 md:mr-0 gap-5">
+                        <div>
+                            <img src="./img/vue_1665253470537.png" alt="aci" class="w-20">
+                        </div>
+                        <div class="">
+                            <h3 class="font-bold text-sm xl:text-base mb-1">VueJS</h3>
+                            <div class="flex justify-center items-center gap-3 text-slate-600 text-xs">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-server w-[1em] h-1em"></i> <span>3 series</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-graduation-cap w-[1em] h-[1em]"></i> <span>90 Lessons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
+        </div>
         </div>
     </main>
 
     <!-- lesson area -->
 
-    <main class="bg-[#FBFDFF]">
-        <div class="container mx-auto px-3 lg:px-5 py-10">
-            <h1 class="text-black text-4xl font-bold">Lessons.</h1>
-            <div class="lg:flex items-center justify-between">
-                <h3 class="text-[#4F46E5] text-xl font-semibold uppercase">Here's What's New</h3>
-                <h3 class="text-[#020617] text-xl font-semibold items-center">Browse All Lessons <i
-                        class="fa-solid fa-arrow-right"></i></h3>
+    <main class="">
+        <div class="container mx-auto px-3 lg:px-5 py-5">
+            <h2 class="text-2xl md:text-3xl xl:text-4xl font-heading font-black tracking-tight mb-1.5">Lessons.</h2>
+            <div class="flex justify-between items-center">
+                <div>
+                    <h5 class="font-bold text-brand-600 uppercase relative z-10 mb-1.5 md:mb-0 topics">
+                        Here's What's New
+                    </h5>
+                </div>
+                <div>
+                    <a href="/lessons"
+                        class="flex items-center gap-1.5 font-bold link current text-slate-600 hover:text-slate-950">
+                        Browse All Lessons <i class="fa-solid fa-arrow-right w-[1em] h-[1em]"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-3">
-                <div>
-                    <img src="./img/l8ki0nmyn1hzq2abxgsr2dor.jpg" alt="advanced" class="rounded-lg">
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pb-8 pt-4">
+                <div class="flex flex-col mb-4 duration-300 relative group lg:col-span-2">
+                    <div class="mb-2">
+                        <div class="w-full relative duration-300">
+                            <div class="overflow-hidden max-w-full relative rounded-md group-hover:shadow-xl duration-300 group-hover:scale-[104%] h-full">
+                                <div class="absolute -top-px -left-px w-[calc(100%+3px)] h-[calc(100%+2px)] z-10 pointer-events-none lessons">
+                                    <img class="w-full" src="./img/video(1).webp" alt="video" loading="lazy">
+                                </div>
+                                <div class="absolute bottom-1 left-1 p-1 bg-slate-base-900/80 backdrop-blur-md text-slate-base-50 flex items-center rounded-sm z-20">
+                                    <div class="h-2.5 mr-1 rounded-md text-slate-base-200 flex items-center justify-center">
+                                        <img src="./img//plus-badge-100.png" alt="plus" class="h-2.5">
+                                    </div>
+                                    <div class="text-[0.5rem] uppercase font-bold pr-0.5 leading-none">Exclusive</div>
+                                    <picture class="max-w-full h-full">
+                                        <img src="./img/ygf96wnzf4jqhqzakllfr839.jpg" alt="lesson1" class="w-full max-w-full">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="flex items-center justify-between gap-3 py-3">
                         <p>Adding an Api to...</p>
                         <div class="flex gap-3">
@@ -683,7 +1218,7 @@
                         </div>
                     </div>
                     <h1 class="text-[#0F172A] text-xl font-bold">Advanced String Filtering</h1>
-                    <p class="text-[#445264] text-xs">In this lesson, we upgrade our course name filter to support both
+                    <p class="mb-2 mt-2 text-xs text-slate-600 line-clamp-4">In this lesson, we upgrade our course name filter to support both
                         simple strings and advanced object-based queries using VineJS’ union rule. This allows users to
                         specify not just what to search for, but how to search for it.</p>
                 </div>
@@ -1051,7 +1586,8 @@
             </div>
         </div>
         <div class="">
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 bg-[#181742] p-10 rounded-md border-2 border-[#242551]">
+            <div
+                class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 bg-[#181742] p-10 rounded-md border-2 border-[#242551]">
                 <div class="">
                     <img src="./img//adocasts-plus-white-40.png" alt="pic" class="w-20">
                     <h1 class="text-2xl font-bold">Monthly</h1>
@@ -1059,8 +1595,10 @@
                         <h1 class="text-7xl pt-3">$8</h1>
                         <p class="pt-14 text-[#93A2B7]">/ month</p>
                     </div>
-                    <p class="text-[#93A2B7] text-[18px] py-1">Take things month-by-month with one low price to unlock everything!</p>
-                    <button class="bg-[#E6E8EB] text-[#1A1847] w-full mt-3 py-2 rounded-md font-semibold">Get Started</button>
+                    <p class="text-[#93A2B7] text-[18px] py-1">Take things month-by-month with one low price to unlock
+                        everything!</p>
+                    <button class="bg-[#E6E8EB] text-[#1A1847] w-full mt-3 py-2 rounded-md font-semibold">Get
+                        Started</button>
                 </div>
                 <div class="">
                     <img src="./img//adocasts-plus-white-40.png" alt="" class="w-20">
@@ -1069,8 +1607,10 @@
                         <h1 class="text-7xl pt-3">$80</h1>
                         <p class="pt-14 text-[#93A2B7]">/ year</p>
                     </div>
-                    <p class="text-[#93A2B7] text-[18px] py-1">Take things year-by-year with one low price to unlock everything!</p>
-                    <button class="bg-[#E6E8EB] text-[#1A1847] w-full mt-3 py-2 rounded-md font-semibold">Get Started</button>
+                    <p class="text-[#93A2B7] text-[18px] py-1">Take things year-by-year with one low price to unlock
+                        everything!</p>
+                    <button class="bg-[#E6E8EB] text-[#1A1847] w-full mt-3 py-2 rounded-md font-semibold">Get
+                        Started</button>
                 </div>
                 <div class="">
                     <img src="./img/adocasts-plus-white-40.png" alt="" class="w-20">
@@ -1079,8 +1619,10 @@
                         <h1 class="text-7xl pt-3">$285</h1>
                         <p class="pt-14 text-[#93A2B7]">/ lifetime</p>
                     </div>
-                    <p class="text-[#93A2B7] text-[18px] py-1">Hate subscriptions? Me too! Pay once, then never again with our forever plan.</p>
-                    <button class="bg-[#E6E8EB] text-[#1A1847] w-full mt-3 py-2 rounded-md font-semibold">Get Started</button>
+                    <p class="text-[#93A2B7] text-[18px] py-1">Hate subscriptions? Me too! Pay once, then never again
+                        with our forever plan.</p>
+                    <button class="bg-[#E6E8EB] text-[#1A1847] w-full mt-3 py-2 rounded-md font-semibold">Get
+                        Started</button>
                 </div>
             </div>
         </div>
@@ -1126,14 +1668,15 @@
                     <li><a href="#">Guidelines</a></li>
                 </ul>
             </div>
-            <div class="mb-10"> 
+            <div class="mb-10">
                 <p class="text-[#1D283A] text-2xl">Subscribe to our newsletter</p>
                 <p class="text-gray-600 text-xl">To get a monthly roundup of our latest lessons.</p>
                 <div class="py-3">
-                    <input type="text" name="email" placeholder="Email Address" class="py-2 px-1 border-2 hover:border-blue-600">
+                    <input type="text" name="email" placeholder="Email Address"
+                        class="py-2 px-1 border-2 hover:border-blue-600">
                     <button class="text-white bg-[#634DBA] py-2 px-3 rounded-md">Subscribe</button>
                 </div>
-            </div>   
+            </div>
         </div>
         <div class="border border-gray-300 mt-3"></div>
         <div class="lg:flex items-center justify-between pt-3">
