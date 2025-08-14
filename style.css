@@ -1,6 +1,7 @@
 :root {
   --brand-600: 79 70 229;
   --slate-700: 15 23 42;
+  --slate-600: 71 85 105 1;
 }
 
 .hoverEffect {
@@ -31,6 +32,11 @@
 .text-brand-600 {
     --tw-text-opacity: 1;
     color: rgb(var(--brand-600) / var(--tw-text-opacity));
+}
+
+.text-slate-600 {
+    --tw-text-opacity: 1;
+    color: rgb(var(--slate-600) / var(--tw-text-opacity));
 }
 
 .topics {
