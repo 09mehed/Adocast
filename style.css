@@ -2,6 +2,31 @@
   --brand-600: 79 70 229;
   --slate-700: 15 23 42;
   --slate-600: 71 85 105 1;
+  --slate-300: 203 213 225 1;
+  --slate-900: 15 23 42 1 ;
+  --brand-base-300: 41 40 90;
+  --brand-base-950: 30 27 75 0.75;
+  --slate-base-100: 241 254 249 1;
+  --slate-base-800: 30 41 59 1;
+}
+.button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(110, 86, 207);
+    border-radius: 6px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+}
+
+.border-brand-base-300 {
+    border-color: rgb(var(--brand-base-300));
+}
+
+.bg-brand-base-950 {
+    background-color: rgb(var(--brand-base-950));
 }
 
 .hoverEffect {
